@@ -1,0 +1,33 @@
+theme = "catppuccin_frappe"
+
+[editor]
+line-number = "relative"
+mouse = false
+cursorline = true
+cursorcolumn = true
+rulers = [80, 100]
+bufferline = "always"
+color-modes = true
+shell = ["powershell.exe"]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+idle-timeout = 0
+completion-trigger-len = 1
+
+[editor.cursor-shape]
+normal = "hidden"
+insert = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.lsp]
+auto-signature-help = false
+display-signature-help-docs = false
+
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
