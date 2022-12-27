@@ -8,13 +8,13 @@ cursorcolumn = true
 rulers = [80, 100]
 bufferline = "always"
 color-modes = true
-shell = ["powershell.exe"]
+shell = ["pwsh.exe"]
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
 idle-timeout = 0
 completion-trigger-len = 1
 
 [editor.cursor-shape]
-normal = "hidden"
+normal = "block"
 insert = "underline"
 
 [editor.indent-guides]
