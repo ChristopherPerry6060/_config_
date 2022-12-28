@@ -25,7 +25,7 @@ return {
   ),
   default_cursor_style = "SteadyBlock",
   enable_tab_bar = true,
-  use_fancy_tab_bar = true,
+  use_fancy_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   animation_fps = 30,
@@ -46,7 +46,7 @@ return {
   ]]   
   leader = { key = ' ', mods = 'SHIFT' },
   keys = {
-    { 
+    {
       -- Activate Next Pane
       key = 'j', 
       mods = 'LEADER', 
@@ -84,7 +84,7 @@ return {
       key = '[',
       mods = 'LEADER', 
       action = wezterm.action.ShowLauncherArgs { 
-        flags = 'FUZZY' }
+        flags = 'FUZZY|COMMANDS' }
     },
     { 
       -- ShowLauncher w/ Workspaces
