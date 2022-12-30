@@ -1,0 +1,3 @@
+inherits = "catppuccin_mocha"
+
+"ui.cursor.match" = { fg = "peach",  modifiers = ["bold"], underline.style = "line" }

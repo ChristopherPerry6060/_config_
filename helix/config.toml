@@ -1,4 +1,4 @@
-theme = "catppuccin_frappe"
+theme = "MyTheme"
 
 [editor]
 line-number = "relative"
@@ -6,7 +6,7 @@ mouse = false
 cursorline = true
 cursorcolumn = true
 rulers = [80, 100]
-bufferline = "always"
+bufferline = "multiple"
 color-modes = true
 shell = [
   "powershell.exe", 
