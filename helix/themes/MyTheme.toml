@@ -1,3 +1,4 @@
-inherits = "catppuccin_mocha"
+inherits = "catppuccin_frappe" # Uncomment for work
+# inherits = "catppuccin_mocha" # Uncomment for home
 
 "ui.cursor.match" = { fg = "peach",  modifiers = ["bold"], underline.style = "line" }
