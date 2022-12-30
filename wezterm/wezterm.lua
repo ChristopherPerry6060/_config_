@@ -19,7 +19,8 @@ return {
     Appearance
   ****************
   ]]
-  color_scheme = "Catppuccin Mocha",
+  -- color_scheme = "Catppuccin Mocha", -- Uncomment for Home
+  color_scheme = "Catppuccin Frappe", -- Uncomment for Work
   font = wezterm.font( 
     "Source Code Pro", { weight = "DemiBold" }
   ),
