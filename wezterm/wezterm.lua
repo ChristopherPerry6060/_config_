@@ -19,7 +19,7 @@ return {
     Appearance
   ****************
   ]]
-  color_scheme = "Catppuccin Frappe",
+  color_scheme = "Catppuccin Mocha",
   font = wezterm.font( 
     "Source Code Pro", { weight = "DemiBold" }
   ),
