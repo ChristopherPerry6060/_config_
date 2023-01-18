@@ -19,8 +19,8 @@ return {
     Appearance
   ****************
   ]]
-  -- color_scheme = "Catppuccin Mocha", -- Uncomment for Home
-  color_scheme = "Catppuccin Frappe", -- Uncomment for Work
+  color_scheme = "Catppuccin Mocha", -- Uncomment for Home
+  -- color_scheme = "Catppuccin Frappe", -- Uncomment for Work
   font = wezterm.font( 
     "Source Code Pro", { weight = "DemiBold" }
   ),
@@ -29,7 +29,7 @@ return {
   use_fancy_tab_bar = false,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
-  animation_fps = 30,
+  animation_fps = 60,
   
   --[[
   ****************
