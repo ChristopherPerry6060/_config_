@@ -86,6 +86,11 @@ return {
       mods = 'LEADER', 
       action = wezterm.action.ShowLauncherArgs { 
         flags = 'FUZZY|COMMANDS' }
+    },{ 
+      -- ShowLauncher
+      key = ']',
+      mods = 'LEADER', 
+      action = wezterm.action.ShowLauncher 
     },
     { 
       -- ShowLauncher w/ Workspaces
