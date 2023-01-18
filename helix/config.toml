@@ -13,7 +13,7 @@ shell = [
   "-NoProfile",
   "-Command",
 ]
-gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+gutters = ["diagnostics", "spacer", "line-numbers", "diff", "spacer"]
 idle-timeout = 0
 completion-trigger-len = 1
 
