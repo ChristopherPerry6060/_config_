@@ -1,8 +1,8 @@
 require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    flavour = "frappe", -- latte, frappe, macchiato, mocha
     transparent_background = false,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = true,
+    term_colors = false,
     dim_inactive = {
         enabled = false,
         shade = "dark",
@@ -11,22 +11,23 @@ require("catppuccin").setup({
     no_italic = true, -- Force no italic
     no_bold = false, -- Force no bold
     styles = {
-        comments = {},
+        comments = {'bold'},
         conditionals = {},
         loops = {},
         functions = {},
-        keywords = {},
+        keywords = {'bold'},
         strings = {},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
         types = {},
-        operators = {},
+        operators = {'bold'},
     },
     color_overrides = {},
     custom_highlights = {},
     integrations = {
+        native_lsp = { enabled = true },
         cmp = true,
         gitsigns = false,
         nvimtree = false,
