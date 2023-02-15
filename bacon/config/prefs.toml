@@ -4,8 +4,7 @@
 # Uncomment and change the value (true/false) to
 # specify whether bacon should start in summary mode
 #
-summary = true
-
+summary = false
 # Uncomment and change the value (true/false) to
 # specify whether bacon should start with lines wrapped
 #
@@ -37,10 +36,9 @@ o = "toggle-raw-output"
 # End = "scroll-to-bottom"
 # Up = "scroll-lines(-1)"
 # Down = "scroll-lines(1)"
-# PageUp = "scroll-pages(-1)"
 # PageDown = "scroll-pages(1)"
 # Space = "scroll-pages(1)"
 # g = "scroll-to-top"
 # shift-g = "scroll-to-bottom"
-# k = "scroll-lines(-1)"
-# j = "scroll-lines(1)"
+shift-k = "scroll-pages(-1)"
+shift-j = "scroll-pages(1)"
