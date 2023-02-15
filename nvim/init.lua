@@ -6,7 +6,9 @@ require('shared.set')
 
 return require('packer').startup(function(use)
     -- Lua
+    use ('kdheepak/lazygit.nvim')
     use ('wbthomason/packer.nvim')
+    use ('Canop/nvim-bacon')
     use ('tpope/vim-surround')
     use ('ThePrimeagen/harpoon')
     use ('lukas-reineke/indent-blankline.nvim')
