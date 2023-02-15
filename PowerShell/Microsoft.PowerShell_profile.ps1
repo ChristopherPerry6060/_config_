@@ -1,3 +1,4 @@
+
 function prompt {
     $p = $executionContext.SessionState.Path.CurrentLocation
     $osc7 = ""
@@ -12,4 +13,14 @@ function cgen {
     & cargo generate --git https://github.com/ChristopherPerry6060/project-templates
 }
 
+function unzip {
+    Expand-Archive "*.zip" .
+    
+}
+function keep-merged {
+    get-childitem | where name -notlike "Merged*" | rm
+}
+function rma {
+    rm *
+}
 Set-Alias -Name lg -Value lazygit
