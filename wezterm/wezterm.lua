@@ -97,7 +97,7 @@ return {
       key = 'w', 
       mods = 'LEADER', 
       action = wezterm.action.ShowLauncherArgs { 
-        flags = 'FUZZY|WORKSPACES|TABS' }
+        flags = 'FUZZY|WORKSPACES' }
     },
     { 
       -- ShowLauncher (Tabs)
