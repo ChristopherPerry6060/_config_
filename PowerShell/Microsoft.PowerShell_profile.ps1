@@ -11,5 +11,8 @@ function prompt {
 function cgen {
     & cargo generate --git https://github.com/ChristopherPerry6060/project-templates
 }
+function cdo {
+    & cargo doc --color always --no-deps --open
+}
 
 Set-Alias -Name lg -Value lazygit
