@@ -1,3 +1,4 @@
+vim.keymap.set("n", "<leader>o", "o<esc>", {})
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
