@@ -4,6 +4,7 @@
   ****************
 ]]
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- Always start maximized
 local mux = wezterm.mux
@@ -24,6 +25,7 @@ return {
     font = wezterm.font(
         "Source Code Pro", { weight = "DemiBold" }
     ),
+    disable_default_key_bindings = true,
     default_cursor_style = "SteadyBlock",
     enable_tab_bar = false,
     use_fancy_tab_bar = false,
@@ -43,71 +45,30 @@ return {
     KEYBINDS
   ****************
   ]]
-    leader = { key = ' ', mods = 'SHIFT' },
+    leader = { key = ' ', mods = 'CTRL' },
     keys = {
-        {
-            -- Activate Next Pane
-            key = 'j',
-            mods = 'LEADER',
-            action = wezterm.action.ActivatePaneDirection 'Next'
-        },
-        {
-            -- Split Pane Vertically
-            key = 'v',
-            mods = 'LEADER',
-            action = wezterm.action.SplitPane {
-                direction = "Right",
-                size = { Percent = 35 }
-            }
-        },
-        {
-            -- Close Pane w/ Confirmation
-            key = '\\',
-            mods = 'LEADER',
-            action = wezterm.action.CloseCurrentPane {
-                confirm = true
-            }
-        },
-        {
-            -- New Tab
-            key = "'",
-            mods = 'LEADER',
-            action = wezterm.action.SpawnCommandInNewTab
-        },
-        {
-            -- Activate Next Tab
-            key = 'k',
-            mods = 'LEADER',
-            action = wezterm.action.ActivateTabRelative(1)
-        },
-        {
-            -- ShowLauncher
-            key = '[',
-            mods = 'LEADER',
-            action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|COMMANDS'
-            }
-        }, {
-            -- ShowLauncher
-            key = ']',
-            mods = 'LEADER',
-            action = wezterm.action.ShowLauncher
-        },
-        {
-            -- ShowLauncher w/ Workspaces
-            key = 'w',
-            mods = 'LEADER',
-            action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|WORKSPACES'
-            }
-        },
-        {
-            -- ShowLauncher (Tabs)
-            key = 't',
-            mods = 'LEADER',
-            action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|TABS'
-            }
-        }
+        { key = 'Enter',  mods = 'ALT',        action = act.ToggleFullScreen },
+        { key = '+',      mods = 'SHIFT|CTRL', action = act.IncreaseFontSize },
+        { key = '-',      mods = 'SHIFT|CTRL', action = act.DecreaseFontSize },
+        { key = "'",      mods = 'LEADER',     action = act.SpawnCommandInNewTab { domain = 'CurrentPaneDomain' } },
+        { key = "h",      mods = 'LEADER',     action = act.SpawnCommandInNewTab { domain = 'DefaultDomain' } },
+        { key = 'C',      mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
+        { key = 'n',      mods = 'LEADER',     action = act.SpawnWindow },
+        { key = 'V',      mods = 'SHIFT|CTRL', action = act.PasteFrom 'Clipboard' },
+        { key = 'k',      mods = 'LEADER',     action = act.ActivateTabRelative(1) },
+        { key = 'j',      mods = 'LEADER',     action = act.ActivateTabRelative( -1) },
+        { key = 't',      mods = 'LEADER',     action = act.ShowTabNavigator },
+        { key = 'p',      mods = 'LEADER',     action = act.PaneSelect },
+        { key = 'X',      mods = 'LEADER',     action = act.ActivateCopyMode },
+        { key = '[',      mods = 'LEADER',     action = act.ShowLauncher },
+        { key = 'Q',      mods = 'LEADER',     action = act.CloseCurrentTab { confirm = true } },
+        { key = 'q',      mods = 'LEADER',     action = act.CloseCurrentPane { confirm = true } },
+        { key = 'w',      mods = 'LEADER',     action = act.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
+        { key = 'd',      mods = 'LEADER',     action = act.ScrollByPage( -1) },
+        { key = 'u',      mods = 'SHIFT',      action = act.ScrollByPage(1) },
+        { key = 'Insert', mods = 'SHIFT',      action = act.PasteFrom 'PrimarySelection' },
+        { key = 'Insert', mods = 'CTRL',       action = act.CopyTo 'PrimarySelection' },
+        { key = 'Copy',   mods = 'NONE',       action = act.CopyTo 'Clipboard' },
+        { key = 'Paste',  mods = 'NONE',       action = act.PasteFrom 'Clipboard' },
     }
 }
