@@ -37,7 +37,7 @@ return {
     Behavior
   ****************
   ]]
-    default_prog = { "pwsh.exe", "-NoLogo" },
+    default_prog = { "pwsh.exe", "-NoLogo", "-WorkingDirectory",  "~" },
     skip_close_confirmation_for_processes_named = { nil },
     exit_behavior = "Hold",
     --[[
