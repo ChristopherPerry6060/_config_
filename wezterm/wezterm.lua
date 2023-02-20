@@ -19,8 +19,8 @@ return {
     Appearance
   ****************
   ]]
-    -- color_scheme = "Catppuccin Mocha", -- Uncomment for Home
-    color_scheme = "Catppuccin Frappe", -- Uncomment for Work
+    color_scheme = "Catppuccin Mocha", -- Uncomment for Home
+    -- color_scheme = "Catppuccin Frappe", -- Uncomment for Work
     font = wezterm.font(
         "Source Code Pro", { weight = "DemiBold" }
     ),
@@ -57,14 +57,16 @@ return {
             mods = 'LEADER',
             action = wezterm.action.SplitPane {
                 direction = "Right",
-                size = { Percent = 35 } }
+                size = { Percent = 35 }
+            }
         },
         {
             -- Close Pane w/ Confirmation
             key = '\\',
             mods = 'LEADER',
             action = wezterm.action.CloseCurrentPane {
-                confirm = true }
+                confirm = true
+            }
         },
         {
             -- New Tab
@@ -83,26 +85,29 @@ return {
             key = '[',
             mods = 'LEADER',
             action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|COMMANDS' }
+                flags = 'FUZZY|COMMANDS'
+            }
         }, {
-        -- ShowLauncher
-        key = ']',
-        mods = 'LEADER',
-        action = wezterm.action.ShowLauncher
-    },
+            -- ShowLauncher
+            key = ']',
+            mods = 'LEADER',
+            action = wezterm.action.ShowLauncher
+        },
         {
             -- ShowLauncher w/ Workspaces
             key = 'w',
             mods = 'LEADER',
             action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|WORKSPACES' }
+                flags = 'FUZZY|WORKSPACES'
+            }
         },
         {
             -- ShowLauncher (Tabs)
             key = 't',
             mods = 'LEADER',
             action = wezterm.action.ShowLauncherArgs {
-                flags = 'FUZZY|TABS' }
-        } }
+                flags = 'FUZZY|TABS'
+            }
+        }
+    }
 }
-
