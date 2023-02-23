@@ -1,10 +1,3 @@
--- Insert two lines
-vim.keymap.set("n", "<leader>oO", "O<esc><Plug>Ysurroundiw}", {})
-vim.keymap.set("n", "<leader>oo", "o<esc><Plug>Ysurroundiw}", {})
-vim.keymap.set("n", "<leader>q", "@q", {})
-vim.keymap.set("n", "<leader>A", "gg0vG$", {})
-
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -19,9 +12,7 @@ vim.opt.undofile = true
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "80,100"
 vim.opt.hlsearch = false
-
-
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
