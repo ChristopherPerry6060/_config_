@@ -16,13 +16,13 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'catppuccin/nvim', as = 'catppuccin' }
 
-    -- Telescope related
+    -- -- Telescope related
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.1',
-      requires = { {'nvim-lua/plenary.nvim'} }
-    }
+       requires = { {'nvim-lua/plenary.nvim'} }
+     }
     use { 'nvim-telescope/telescope-file-browser.nvim' }
 
-    -- LSP
+    -- -- LSP
     use {
       'VonHeikemen/lsp-zero.nvim',
       requires = {
