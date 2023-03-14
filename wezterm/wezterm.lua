@@ -20,8 +20,8 @@ return {
     Appearance
   ****************
   ]]
-    color_scheme = "Catppuccin Mocha", -- Uncomment for Home
-    -- color_scheme = "Catppuccin Frappe", -- Uncomment for Work
+    -- color_scheme = "Catppuccin Mocha", -- Uncomment for Home
+    color_scheme = "Catppuccin Frappe", -- Uncomment for Work
     font = wezterm.font(
         "Source Code Pro", { weight = "DemiBold" }
     ),
@@ -37,7 +37,7 @@ return {
     Behavior
   ****************
   ]]
-    default_prog = { "pwsh.exe", "-NoLogo", "-WorkingDirectory",  "~" },
+    default_prog = { "pwsh.exe", "-NoLogo"},
     skip_close_confirmation_for_processes_named = { nil },
     exit_behavior = "Hold",
     --[[
